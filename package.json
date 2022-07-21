@@ -1,0 +1,46 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Javascript basics.js",
+    "scripts": {
+        "test": "jest",
+        "pretest": "node_modules/.bin/eslint people.js",
+        "prepare": "husky install",
+        "react": "cd React && yarn lint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run react"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "node_modules/.bin/eslint — fix",
+            "git add"
+        ]
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^8.20.0",
+        "husky": "^8.0.0",
+        "jest": "^28.1.1",
+        "lint-staged": "^13.0.3"
+    },
+    "dependencies": {
+        "7zip-min": "^1.4.3",
+        "axios": "^0.27.2",
+        "decompress": "^4.2.1",
+        "extract-files": "^12.0.0",
+        "extract-pkg": "^1.2.3",
+        "jszip": "^3.10.0",
+        "newman-reporter-htmlextra": "^1.22.9",
+        "node-downloader-helper": "^2.1.1",
+        "rarjs": "0.0.2",
+        "request": "^2.88.2",
+        "winrarjs": "0.0.17",
+        "yargs": "^17.5.1"
+    }
+}

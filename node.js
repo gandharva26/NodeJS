@@ -9,7 +9,7 @@
 //Global object
 // set interval - runs every second, setTimeout - runs once after those many seconds
 // dirname : directory name, filename - abs path+ filename
-// can'tt access document() methods, presentonly in browser
+// In Node.Js, can't access document() methods, presentonly in browser DOM methods
 //import * as Path from 'path';
 const path = require('path');
 
